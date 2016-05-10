@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyNetWorkLoadingViewController">
+            <connections>
+                <outlet property="activityindicatorView" destination="fQK-sQ-CQI" id="qbR-qM-yAH"/>
+                <outlet property="showLoadingView" destination="MRc-gi-3VO" id="0Zc-DY-a6S"/>
+                <outlet property="showNetWorkView" destination="9Ye-qt-Y48" id="hhI-o0-DHo"/>
+                <outlet property="showNoDateView" destination="S4F-3O-ztf" id="UNL-n3-v4W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRc-gi-3VO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fQK-sQ-CQI">
+                            <rect key="frame" x="178" y="309" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="SnU-7f-onz"/>
+                                <constraint firstAttribute="height" constant="20" id="scn-Vp-mOm"/>
+                            </constraints>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加载中..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVs-5j-MVr">
+                            <rect key="frame" x="159" y="339" width="58" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="58" id="58g-Y3-NFT"/>
+                                <constraint firstAttribute="height" constant="18" id="TIj-I3-iNL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="fVs-5j-MVr" firstAttribute="top" secondItem="fQK-sQ-CQI" secondAttribute="bottom" constant="10" id="GU2-KA-S7L"/>
+                        <constraint firstItem="fVs-5j-MVr" firstAttribute="centerX" secondItem="MRc-gi-3VO" secondAttribute="centerX" id="eLP-ha-gZ9"/>
+                        <constraint firstItem="fQK-sQ-CQI" firstAttribute="top" secondItem="MRc-gi-3VO" secondAttribute="top" constant="309" id="hLG-qr-ivA"/>
+                        <constraint firstItem="fQK-sQ-CQI" firstAttribute="centerX" secondItem="MRc-gi-3VO" secondAttribute="centerX" id="wDC-h9-m14"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-3O-ztf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CD9-mN-QA6" userLabel="request">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
+                            <connections>
+                                <action selector="requestButton:" destination="-1" eventType="touchUpInside" id="8Oo-Rl-jGq"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_wushuju.png" translatesAutoresizingMaskIntoConstraints="NO" id="NhT-a5-M1W">
+                            <rect key="frame" x="162" y="266" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="A5h-Bi-Wux"/>
+                                <constraint firstAttribute="height" constant="50" id="qwK-mE-B8e"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebg-oe-1Qf">
+                            <rect key="frame" x="156" y="326" width="63" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="63" id="GGc-AV-Rcj"/>
+                                <constraint firstAttribute="height" constant="15" id="YpX-cA-yCM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="CD9-mN-QA6" firstAttribute="top" secondItem="S4F-3O-ztf" secondAttribute="top" id="0dO-QO-9WR"/>
+                        <constraint firstItem="CD9-mN-QA6" firstAttribute="leading" secondItem="S4F-3O-ztf" secondAttribute="leading" id="97s-yy-zGr"/>
+                        <constraint firstItem="ebg-oe-1Qf" firstAttribute="top" secondItem="NhT-a5-M1W" secondAttribute="bottom" constant="10" id="UlG-jF-Axw"/>
+                        <constraint firstItem="NhT-a5-M1W" firstAttribute="top" secondItem="S4F-3O-ztf" secondAttribute="top" constant="266" id="VRH-WZ-bny"/>
+                        <constraint firstItem="NhT-a5-M1W" firstAttribute="centerX" secondItem="S4F-3O-ztf" secondAttribute="centerX" id="gyw-Zz-n7l"/>
+                        <constraint firstAttribute="trailing" secondItem="CD9-mN-QA6" secondAttribute="trailing" id="kS4-AJ-YqM"/>
+                        <constraint firstItem="ebg-oe-1Qf" firstAttribute="centerX" secondItem="S4F-3O-ztf" secondAttribute="centerX" id="kTh-PV-GTF"/>
+                        <constraint firstAttribute="bottom" secondItem="CD9-mN-QA6" secondAttribute="bottom" constant="3" id="zSo-Fw-MC7"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ye-qt-Y48">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYF-Ll-nbX" userLabel="request">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <connections>
+                                <action selector="requestButton:" destination="-1" eventType="touchUpInside" id="2Ap-Al-6a0"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_wuwangluo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wnr-RS-zND">
+                            <rect key="frame" x="162" y="241" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="EVV-pN-BPe"/>
+                                <constraint firstAttribute="height" constant="50" id="hwA-q6-Oj7"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络连接不可用，请检查网络！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zza-8J-zLh">
+                            <rect key="frame" x="82" y="301" width="211" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="211" id="BnS-Tv-FDS"/>
+                                <constraint firstAttribute="height" constant="15" id="aZp-9M-oMP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重新加载" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjt-Ql-kdj">
+                            <rect key="frame" x="156" y="326" width="63" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="63" id="Ahf-0h-qnb"/>
+                                <constraint firstAttribute="height" constant="15" id="ojp-d5-SXE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="WYF-Ll-nbX" firstAttribute="leading" secondItem="9Ye-qt-Y48" secondAttribute="leading" id="5dk-WR-wXc"/>
+                        <constraint firstItem="Zza-8J-zLh" firstAttribute="centerX" secondItem="9Ye-qt-Y48" secondAttribute="centerX" id="B3u-cf-uEe"/>
+                        <constraint firstAttribute="trailing" secondItem="WYF-Ll-nbX" secondAttribute="trailing" id="Dex-TD-XoJ"/>
+                        <constraint firstItem="wnr-RS-zND" firstAttribute="top" secondItem="9Ye-qt-Y48" secondAttribute="top" constant="241" id="LU0-5L-pbV"/>
+                        <constraint firstItem="Zza-8J-zLh" firstAttribute="top" secondItem="wnr-RS-zND" secondAttribute="bottom" constant="10" id="XJW-5Y-7pS"/>
+                        <constraint firstItem="WYF-Ll-nbX" firstAttribute="top" secondItem="9Ye-qt-Y48" secondAttribute="top" id="bYV-cr-G8J"/>
+                        <constraint firstItem="Pjt-Ql-kdj" firstAttribute="centerX" secondItem="9Ye-qt-Y48" secondAttribute="centerX" id="dip-WH-x5c"/>
+                        <constraint firstAttribute="bottom" secondItem="WYF-Ll-nbX" secondAttribute="bottom" id="dpb-JD-cab"/>
+                        <constraint firstItem="Pjt-Ql-kdj" firstAttribute="top" secondItem="Zza-8J-zLh" secondAttribute="bottom" constant="10" id="dvq-WU-mjf"/>
+                        <constraint firstItem="wnr-RS-zND" firstAttribute="centerX" secondItem="9Ye-qt-Y48" secondAttribute="centerX" id="wpq-So-cvN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MRc-gi-3VO" secondAttribute="trailing" id="7nw-w6-tlU"/>
+                <constraint firstItem="9Ye-qt-Y48" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CX3-4j-0oC"/>
+                <constraint firstAttribute="bottom" secondItem="MRc-gi-3VO" secondAttribute="bottom" id="KXe-kq-U2x"/>
+                <constraint firstItem="S4F-3O-ztf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Q2c-SQ-Msp"/>
+                <constraint firstItem="S4F-3O-ztf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qtt-7l-Iuc"/>
+                <constraint firstItem="MRc-gi-3VO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SZS-B4-R0e"/>
+                <constraint firstAttribute="bottom" secondItem="9Ye-qt-Y48" secondAttribute="bottom" id="bQt-Ad-YuF"/>
+                <constraint firstAttribute="trailing" secondItem="S4F-3O-ztf" secondAttribute="trailing" id="dkb-5U-xfo"/>
+                <constraint firstItem="9Ye-qt-Y48" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="giy-2Y-JKV"/>
+                <constraint firstAttribute="bottom" secondItem="S4F-3O-ztf" secondAttribute="bottom" id="kaN-Tv-Uor"/>
+                <constraint firstAttribute="trailing" secondItem="9Ye-qt-Y48" secondAttribute="trailing" id="nhU-by-5Qo"/>
+                <constraint firstItem="MRc-gi-3VO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="npA-6X-FFZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="395.5" y="326.5"/>
+        </view>
+        <viewController id="ejZ-tQ-HnB">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="mcj-mp-P77"/>
+                <viewControllerLayoutGuide type="bottom" id="KUZ-wf-OWI"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="jm4-Ma-Xif">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            </view>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="icon_wushuju.png" width="200" height="200"/>
+        <image name="icon_wuwangluo.png" width="200" height="200"/>
+    </resources>
+</document>
